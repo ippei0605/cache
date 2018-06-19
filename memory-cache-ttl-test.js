@@ -1,20 +1,14 @@
 /**
  * @file Cache Test: lru-cache
  * @author Ippei SUZUKI
- * @see {@link https://www.npmjs.com/package/lru-cache}
+ * @see {@link https://www.npmjs.com/package/memory-cache-ttl}
  */
 
 'use strict';
 
 // モジュールを読込む。
-const
-    LRU = require("lru-cache"),
-    options = {
-        max: 500,
-        maxAge: 1000 * 60 * 60
-    },
-    cache = LRU(options);
-
+const cache = require('memory-cache-ttl');
+cache.init({ ttl: 3, interval: 1, randomize: false });
 
 // キャッシュにデータをセットする。
 cache.set('hello', {message: 'Hello world.'});

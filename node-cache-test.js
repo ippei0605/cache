@@ -1,19 +1,14 @@
 /**
  * @file Cache Test: lru-cache
  * @author Ippei SUZUKI
- * @see {@link https://www.npmjs.com/package/lru-cache}
+ * @see {@link https://www.npmjs.com/package/node-cache}
  */
 
 'use strict';
 
 // モジュールを読込む。
-const
-    LRU = require("lru-cache"),
-    options = {
-        max: 500,
-        maxAge: 1000 * 60 * 60
-    },
-    cache = LRU(options);
+const NodeCache = require("node-cache");
+const cache = new NodeCache({stdTTL: 100, checkperiod: 120});
 
 
 // キャッシュにデータをセットする。
