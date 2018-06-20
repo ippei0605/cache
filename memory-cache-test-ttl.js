@@ -10,12 +10,9 @@
 const cache = require('memory-cache');
 
 // キャッシュにデータをセットする。
-cache.put('hello', {message: 'Hello world.'}, 3000);
+cache.put('hello', {message: 'Hello world.'}, 1000);
 console.log(cache.get('hello'));
 
-// 計測 cache-get
-console.time('cache-get');
-for (let i = 0; i < 1000000; i++) {
-    let temp = cache.get('hello');
-}
-console.timeEnd('cache-get');
+setTimeout(() => {
+    console.log(cache.get('hello'));
+}, 2000);
