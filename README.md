@@ -14,7 +14,7 @@
     | # | Module           | 1 million get(ms) | Test program                                         |
     |--:|:-----------------|------------------:|:-----------------------------------------------------|
     | 1 | memory-cache     | 78.907            | [memory-cache-test.js](memory-cache-test.js)         |
-    | 2 | memory-cache-ttl | 3.269             | [memory-cache-test-ttl.js](memory-cache-test-ttl.js) |
+    | 2 | memory-cache-ttl | 3.269             | [memory-cache-ttl-test.js](memory-cache-ttl-test.js) |
     | 3 | lru-cache        | 83.017            | [lru-cache-test.js](lru-cache-test.js)               |
     | 4 | node-cache       | 642.604           | [node-cache-test.js](node-cache-test.js)             |
 
