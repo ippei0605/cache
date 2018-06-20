@@ -11,12 +11,12 @@
 
 * 測定結果を以下に示します。
 
-    | # | Module           | 1 million get(ms) | Test program             |
-    |--:|:-----------------|------------------:|:-------------------------|
-    | 1 | memory-cache     | 78.907            | [memory-cache-test.js](memory-cache-test.js)     |
-    | 2 | memory-cache-ttl | 3.269             | memory-cache-test-ttl.js |
-    | 3 | lru-cache        | 83.017            | lru-cache-test.js        |
-    | 4 | node-cache       | 642.604           | node-cache-test.js       |
+    | # | Module           | 1 million get(ms) | Test program                                         |
+    |--:|:-----------------|------------------:|:-----------------------------------------------------|
+    | 1 | memory-cache     | 78.907            | [memory-cache-test.js](memory-cache-test.js)         |
+    | 2 | memory-cache-ttl | 3.269             | [memory-cache-test-ttl.js](memory-cache-test-ttl.js) |
+    | 3 | lru-cache        | 83.017            | [lru-cache-test.js](lru-cache-test.js)               |
+    | 4 | node-cache       | 642.604           | [node-cache-test.js](node-cache-test.js)             |
 
     > TTL: Time to Live
 
@@ -24,12 +24,13 @@
 1. [memory-cache](https://www.npmjs.com/package/memory-cache)
     - license: BSD-2-Clause
     - データセット時に個別に TTL(ms) を指定できます。
-        - TTL を設定すると setTimeout 経由で削除しているようで、削除が終わるまでコンソールが復帰しません。
+        - TTL を設定すると setTimeout 経由で削除しているようで、削除が終わるまでコンソールが復帰しません。(よって TTLは3秒に設定)
         - TTL を設定しない場合はとても速いです。15.549ms
 1. [memory-cache-ttl](https://www.npmjs.com/package/memory-cache-ttl)
     - license: BSD-2-Clause
     - インスタンスを一つしか作れません。
     - 最速だけど結果が怪しい？ (空の for-loop よりも速い)
+    - テストが終了してもコンソールが復帰しません。
 1. [lru-cache](https://www.npmjs.com/package/lru-cache)
     - license: ISC
     - インスタンスに件数や TTL(ms) を指定できます。
