@@ -21,19 +21,23 @@
     > TTL: Time to Live
 
 ## まとめ
-1. memory-cache
+1. [memory-cache](https://www.npmjs.com/package/memory-cache)
+    - license: BSD-2-Clause
     - TTL を設定できません。
-1. memory-cache-ttl
+1. [memory-cache-ttl](https://www.npmjs.com/package/memory-cache-ttl)
+    - license: BSD-2-Clause
     - インスタンスを一つしか作れません。
     - 最速だけど結果が怪しい？ (空の for-loop よりも速い)
-1. lru-cache
+1. [lru-cache](https://www.npmjs.com/package/lru-cache)
+    - license: ISC
     - インスタンスに件数や TTL(ms) を指定できます。
     - データセット時にも個別に TTL(ms) を指定できます。
     - キーにオブジェクトを設定できます。
         - いいね！と思いましたが、参照が一致しないとヒットしません。どこで使うのでしょう？？
     - maxAge を設定しないととても速いです。 14.745ms
         - 件数制限 (max) だけで良い場合は効果的だと思います。
-1. node-cache
+1. [node-cache](https://www.npmjs.com/package/node-cache)
+    - license: MIT
     - インスタンスに TTL(s) や checkperiod(s) を指定できます。
     - データセット時にも個別に TTL(ms) を指定できます。
     - とても高機能、エラーハンドリングの方法も充実しています。
