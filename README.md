@@ -42,6 +42,6 @@
 1. [node-cache](https://www.npmjs.com/package/node-cache)
     - license: MIT
     - インスタンスに TTL(s) や checkperiod(s) を指定できます。
-    - データセット時にも個別に TTL(ms) を指定できます。
+    - データセット時にも個別に TTL(s) を指定できます。
     - とても高機能、エラーハンドリングの方法も充実しています。
     - 但し、遅いです。
