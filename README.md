@@ -23,25 +23,27 @@
 ## まとめ
 1. [memory-cache](https://www.npmjs.com/package/memory-cache)
     - license: BSD-2-Clause
-    - データセット時に個別に TTL(ms) を指定できます。
+    - データ書き込み時に個別に TTL(ms) を指定できます。
         - TTL を設定すると setTimeout 経由で削除しているようで、削除が終わるまでコンソールが復帰しません。(よって TTLは3秒に設定)
         - TTL を設定しない場合はとても速いです。15.549ms
 1. [memory-cache-ttl](https://www.npmjs.com/package/memory-cache-ttl)
     - license: BSD-2-Clause
-    - インスタンスを一つしか作れません。
+    - インスタンスに TTL (s) を指定できる。
+        - 但し、インスタンスを一つしか作れません。
+    - データ書き込み時にも個別に TTL(s) を指定できます。
     - 最速だけど結果が怪しい？ (空の for-loop よりも速い)
     - テストが終了してもコンソールが復帰しません。
 1. [lru-cache](https://www.npmjs.com/package/lru-cache)
     - license: ISC
-    - インスタンスに件数や TTL(ms) を指定できます。
-    - データセット時にも個別に TTL(ms) を指定できます。
+    - インスタンスに最大件数や TTL(ms) を指定できます。
+        - TTL (maxAge) を設定しないととても速いです。 16.540ms
+            - 最大件数 (max) だけで良い場合は効果的だと思います。
+    - データ書き込み時にも個別に TTL(ms) を指定できます。
     - キーにオブジェクトを設定できます。
         - いいね！と思いましたが、参照が一致しないとヒットしません。どこで使うのでしょう？？
-    - maxAge を設定しないととても速いです。 16.540ms
-        - 件数制限 (max) だけで良い場合は効果的だと思います。
 1. [node-cache](https://www.npmjs.com/package/node-cache)
     - license: MIT
     - インスタンスに TTL(s) や checkperiod(s) を指定できます。
-    - データセット時にも個別に TTL(s) を指定できます。
+    - データ書き込み時にも個別に TTL(s) を指定できます。
     - とても高機能、エラーハンドリングの方法も充実しています。
     - 但し、遅いです。
