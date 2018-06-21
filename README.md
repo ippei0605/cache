@@ -42,7 +42,7 @@
     - キーにオブジェクトを設定できます。
         - いいね！と思いましたが、参照が一致しないとヒットしません。どこで使うのでしょう？？
 
-            ```
+            ```javascript
             const key = {text: 'Hello'};
             cache.set(key, { message: 'Hello world.' });
             console.log(cache.get(key));                    // { message: 'Hello world.' }
