@@ -41,6 +41,14 @@
     - データ書き込み時にも個別に TTL(ms) を指定できます。
     - キーにオブジェクトを設定できます。
         - いいね！と思いましたが、参照が一致しないとヒットしません。どこで使うのでしょう？？
+
+            ```
+            const key = {text: 'Hello'};
+            cache.set(key, { message: 'Hello world.' });
+            console.log(cache.get(key));                    // { message: 'Hello world.' }
+            console.log(cache.get({text: 'Hello'}));        // undefined
+            ```
+
 1. [node-cache](https://www.npmjs.com/package/node-cache)
     - license: MIT
     - インスタンスに TTL(s) や checkperiod(s) を指定できます。
