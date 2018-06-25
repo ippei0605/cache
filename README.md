@@ -21,19 +21,28 @@
     > TTL: Time to Live
 
 ## まとめ
-1. [memory-cache](https://www.npmjs.com/package/memory-cache)
+1. memory-cache
+
+    [![NPM](https://nodei.co/npm/memory-cache.png?stars=true)](https://nodei.co/npm/memory-cache/)
+
     - license: BSD-2-Clause
     - データ書き込み時に個別に TTL(ms) を指定できます。
         - TTL を設定すると setTimeout 経由で削除しているようで、削除が終わるまでコンソールが復帰しません。(よって TTLは3秒に設定)
         - TTL を設定しない場合はとても速いです。15.549ms
-1. [memory-cache-ttl](https://www.npmjs.com/package/memory-cache-ttl)
+1. memory-cache-ttl
+
+    [![NPM](https://nodei.co/npm/memory-cache-ttl.png?stars=true)](https://nodei.co/npm/memory-cache-ttl/)
+
     - license: BSD-2-Clause
     - インスタンスに TTL (s) を指定できる。
         - 但し、インスタンスを一つしか作れません。
     - データ書き込み時にも個別に TTL(s) を指定できます。
     - 最速だけど結果が怪しい？ (空の for-loop よりも速い)
     - テストが終了してもコンソールが復帰しません。
-1. [lru-cache](https://www.npmjs.com/package/lru-cache)
+1. lru-cache
+
+    [![NPM](https://nodei.co/npm/lru-cache.png?stars=true)](https://nodei.co/npm/lru-cache/)
+
     - license: ISC
     - インスタンスに最大件数や TTL(ms) を指定できます。
         - TTL (maxAge) を設定しないととても速いです。 16.540ms
@@ -49,7 +58,10 @@
             console.log(cache.get({text: 'Hello'}));        // undefined
             ```
 
-1. [node-cache](https://www.npmjs.com/package/node-cache)
+1. node-cache
+
+    [![NPM](https://nodei.co/npm/node-cache.png?stars=true)](https://nodei.co/npm/node-cache/)
+
     - license: MIT
     - インスタンスに TTL(s) や checkperiod(s) を指定できます。
     - データ書き込み時にも個別に TTL(s) を指定できます。
